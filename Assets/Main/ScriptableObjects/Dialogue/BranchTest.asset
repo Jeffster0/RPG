@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ed880f6e1d940eead7639ab296d06a, type: 3}
+  m_Name: BranchTest
+  m_EditorClassIdentifier: 
+  dialogueID: Start
+  DialogueLines:
+  - This is a dialogue test.
+  - Is it working?
+  ResponseOption:
+  - text: Yes
+    nextBranch: {fileID: 11400000, guid: 07d991fc54bde429d944353ce259fd49, type: 2}
+  - text: No
+    nextBranch: {fileID: 11400000, guid: 05cc400ad89f545ccb7b02de4686a600, type: 2}
