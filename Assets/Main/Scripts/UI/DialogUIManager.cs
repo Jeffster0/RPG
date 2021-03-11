@@ -74,6 +74,26 @@ public class DialogUIManager : MonoBehaviour
             if(responses == 0){
                 DeactiveDialogue();
             }
+            else
+            {
+                continueText.SetActive(false);
+                for(int i = 0; i < responses; i++)
+                {    
+                    if(i >= 3)
+                    {
+                        break;
+                    }
+                    responsesHolder[i].gameObject.SetActive(true);
+                    responsesHolder[i].GetComponentInChildren<TextMeshProUGUI>().text = branch .ResponseOption[i].text;
+                
+                }
+            }
+        }
+        else
+        {
+            mainText.GetComponent<TextMeshProUGUI>().text = branch.DialogueLines[currentIndex];
+            continueText.SetActive(true);
+            currentIndex++;
         }
         //DeactiveDialogue(); // Remove this and
        // add next Dialogue mechanism here
